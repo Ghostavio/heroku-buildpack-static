@@ -44,7 +44,7 @@ if [ ! -d $APACHE_PATH ]; then
 fi
 
 # update config files
-cp $LP_DIR/conf/httpd.conf $APACHE_PATH/conf
+cp $LP_DIR/docs/conf/httpd.conf.in $APACHE_PATH/conf
 
 cat >>boot.sh <<EOF
 sed -i 's/Listen 80/Listen '\$PORT'/' /app/apache/conf/httpd.conf
